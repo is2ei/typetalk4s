@@ -1,0 +1,13 @@
+name: Formatters & Tests
+
+on:
+  push:
+    branches: master
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run checks
+        run: sbt ci-test
